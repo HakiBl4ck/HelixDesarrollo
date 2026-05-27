@@ -1,17 +1,11 @@
 local PLUGIN = PLUGIN or {}
 
-PLUGIN.name = "Un comando para agregar un item al inventario"
+PLUGIN.name = "Un comando para rolear entorno"
 PLUGIN.author = "Max"
-PLUGIN.description = "Agrega un comando nuevo, hecho por mi, para agregar un item especifico al inventario del jugador"
+PLUGIN.description = "Agrega un comando nuevo, hecho por mi, para rolear el entorno"
 
 function PLUGIN:InitializedPlugins()
     print("[SEGUNDO PLUGIN] Plugin cargado correctamente :p")
-end
-
-function PLUGIN:PlayerLoadedCharacter(client, character)
-    local inv = client:GetCharacter():GetInventory()
-    inv:Add("gmod_camera", 1)
-    client:Notify("Se te ha regalado una camara", client)
 end
 
 ix.command.Add("do", {
